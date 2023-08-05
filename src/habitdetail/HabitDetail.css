@@ -1,0 +1,320 @@
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ------------------------------ 본문 전체 box ------------------------------ */
+#habitdetail-container {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #FFF8DD;
+    background-image: url('../img/habit-bg2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.habit_tracker_title {
+    margin: 10px 0px 20px 0px;
+    text-align: center;
+    font-size: 4em;
+    font-family: 'PyeongChangPeace-Bold';
+    color: #E44A4A;
+    -webkit-text-stroke: 2px #000;
+}
+
+/* 본문 */
+.habit_detail_container {
+    width: 100%;
+    height: 600px;
+    border: 3px solid #E44A4A;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #FFCACA;
+}
+
+/* 본문 제목 전체 칸 */
+.habit_detail_title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    float: none;
+    background-color: #E44A4A;
+    text-align: center;
+    position: relative;
+}
+
+/* 월, 달성일 */
+.todayMonth,
+.success_date {
+    font-size: 30px;
+    color: #FFF8DD;
+}
+
+.success_date {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+}
+
+/* ------------------------------ 내용 전체 box ------------------------------ */
+
+/* 내용 전체 칸 */
+.habit_detail_content_container {
+    width: 80%;
+    height: 350px;
+    border: 3px solid #E44A4A;
+    border-radius: 60px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* 내용 제목 칸 */
+.habit_detail_content_sidebox {
+    float: left;
+    height: 100%;
+    width: 25%;
+    background-color: #E44A4A;
+}
+.habit_detail_content_title {
+    position: relative;
+    height: 240px;
+    padding: 0px 20px;
+}
+/* 제목 div */
+.habit_content_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    line-height: 50px;
+    padding: 0px 20px;
+    margin: 0px;
+    color: #FFF8DD;
+    font-size: 40px;
+    word-break: keep-all;
+    text-align: center;
+}
+
+/* ------------------------------ 성공 버튼 ------------------------------ */
+
+/* 전체 박스 */
+.success_container {
+    width: 100%;
+    height: 104px;
+    padding: 20px 0px;
+    border-top: 3px solid #FFF8DD;
+    background-color: #E44A4A;
+    color: #FFF8DD;
+    text-align: center;
+}
+
+/* 버튼 설명 */
+.explain {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* 체크 버튼 */
+.successBtn {
+    margin-top: 10px;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* ------------------------------ 날짜 원형 이미지 ------------------------------ */
+.circle-container::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.circle-container {
+    float: left;
+    width: 75%;
+    padding: 35px 10px;
+}
+
+.content_circle {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid #E44A4A;
+    background-color: #FFF8DD;
+    margin: 16px 10px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.content_circle button {
+    width: 30px;
+    height: 30px;
+    color: #E44A4A;
+    background-color: #FFF8DD;
+    border: 0;
+    outline: none;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Dovemayo_gothic';
+}
+
+.cherryImg {
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: 3px solid #E44A4A;
+    background-color: #FFF8DD;
+    border-radius: 50px;
+    margin: 16px 10px;
+    text-align: center;
+}
+
+.cherryImg button {
+    width: 55px;
+    height: 49px;
+    margin-top: 2px;
+    margin-right: 5px;
+    background-color: transparent;
+    background-image: url("../img/cherry1.png");    border: 0;
+    outline: none;
+    background-size: 99%;
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+    outline: none;
+}
+
+/* ------------------------------ 수정, 수정 취소, 목록 버튼 ------------------------------ */
+
+/* 버튼 전체 박스 */
+.btnBox {
+    margin-top: 15px;
+    float: right;
+}
+
+.home,
+.editBtn,
+.editCancelBtn {
+    float: left;
+    width: 100px;
+    height: 40px;
+    background-color: #E44A4A;
+    border-radius: 10px;
+    border: 3px solid #FFF8DD;
+    outline: none;
+    color: #FFF8DD;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: 'Dovemayo_gothic';
+    transition: 0.1s background ease-in;
+}
+
+.editBtn,
+.editCancelBtn {
+    margin-right: 20px;
+}
+
+.home:hover,
+.editBtn:hover,
+.editCancelBtn:hover {
+    border: 3px solid #E44A4A;
+    background-color: #FFF8DD;
+    color: #E44A4A;
+}
+
+/* ------------------------------ 제목 수정 중일때 ------------------------------ */
+
+/* 제목 전체 박스 */
+.content_title_edit_container {
+    float: left;
+    height: 100%;
+    width: 25%;
+    background-color: #E44A4A;
+}
+
+/* 입력칸 */
+.title_edit_container {
+    width: 100%;
+    height: 240px;
+    align-items: center;
+    position: relative;
+}
+
+/* 입력 칸 아웃라인 */
+.title_edit_box {
+    width: 85%;
+    height: 80px;
+    border: 3px solid #FFF8DD;
+    margin: auto;
+    padding: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 입력받는 곳 */
+.title_edit_box input {
+    width: 98%;
+    height: 95%;
+    color: #E44A4A;
+    border: none;
+    background-color: rgb(255, 248, 221, 70%);
+    font-size: 25px;
+    text-align: center;
+    outline: none;
+    font-family: 'Dovemayo_gothic';
+}
+
+.title_edit_box input::placeholder {
+    color: #E44A4A;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Dovemayo_gothic';
+}
+
+/* ------------------------------ 수정 내용 저장 버튼 ------------------------------ */
+
+.savebtn_container {
+    width: 100%;
+    height: 104px;
+    padding: 20px 0px;
+    border-top: 3px solid #FFF8DD;
+    background-color: #E44A4A;
+    color: #FFF8DD;
+    text-align: center;
+}
+
+.savebtn {
+    font-size: 30px;
+    padding: 5px 10px;
+    color: #FFF8DD;
+    outline: none;
+    border-radius: 10px;
+    background-color: #E44A4A;
+    border: 3px dashed #FFF8DD;
+    font-family: 'Dovemayo_gothic';
+    cursor: pointer;
+}
+
+#save-icon {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* alert 폰트 */
+.swal2-title {
+    font-family: 'Dovemayo_gothic';
+}
